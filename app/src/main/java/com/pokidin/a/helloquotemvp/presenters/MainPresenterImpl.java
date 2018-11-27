@@ -1,14 +1,14 @@
 package com.pokidin.a.helloquotemvp.presenters;
 
-import com.pokidin.a.helloquotemvp.models.GetQuoteFetcher;
-import com.pokidin.a.helloquotemvp.views.MainView;
+import com.pokidin.a.helloquotemvp.contracts.MainContract;
+import com.pokidin.a.helloquotemvp.views.MainActivity;
 
-public class MainPresenterImpl implements MainPresenter, GetQuoteFetcher.OnFinishedListener {
+public class MainPresenterImpl implements MainContract.MainPresenter, MainContract.GetQuoteFetcher.OnFinishedListener {
 
-    private MainView mMainView;
-    private GetQuoteFetcher mGetQuoteFetcher;
+    private MainContract.MainView mMainView;
+    private MainContract.GetQuoteFetcher mGetQuoteFetcher;
 
-    public MainPresenterImpl(MainView mainView, GetQuoteFetcher getQuoteFetcher) {
+    public MainPresenterImpl(MainActivity mainView, MainContract.GetQuoteFetcher getQuoteFetcher) {
         mMainView = mainView;
         mGetQuoteFetcher = getQuoteFetcher;
     }

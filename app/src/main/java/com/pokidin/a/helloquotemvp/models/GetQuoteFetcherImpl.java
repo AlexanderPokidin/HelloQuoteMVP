@@ -1,10 +1,12 @@
 package com.pokidin.a.helloquotemvp.models;
 
+import com.pokidin.a.helloquotemvp.contracts.MainContract;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class GetQuoteFetcherImpl implements GetQuoteFetcher {
+public class GetQuoteFetcherImpl implements MainContract.GetQuoteFetcher {
 
     private List<String> quoteList = Arrays.asList(
             "Be yourself. everyone else is already taken.",

@@ -8,16 +8,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.pokidin.a.helloquotemvp.R;
+import com.pokidin.a.helloquotemvp.contracts.MainContract;
 import com.pokidin.a.helloquotemvp.models.GetQuoteFetcherImpl;
-import com.pokidin.a.helloquotemvp.presenters.MainPresenter;
 import com.pokidin.a.helloquotemvp.presenters.MainPresenterImpl;
 
-public class MainActivity extends AppCompatActivity implements MainView {
+public class MainActivity extends AppCompatActivity implements MainContract.MainView {
 
     private TextView mTextView;
     private Button mButton;
     private ProgressBar mProgressBar;
-    MainPresenter mMainPresenter;
+    MainContract.MainPresenter mMainPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
